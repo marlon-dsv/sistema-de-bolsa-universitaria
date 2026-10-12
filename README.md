@@ -1,105 +1,72 @@
-﻿# Sistema de Bolsa Universitaria em C++
 
-Projeto desenvolvido em C++ para simular a análise e concessão de bolsas universitárias com base em critérios acadêmicos e socioeconômicos.
+# Sistema de Avaliação de Bolsa Universitária
 
-🔵 Sobre o Projeto
+## Sobre o Projeto
 
-O sistema recebe os dados do candidato e verifica automaticamente qual bolsa ele pode receber:
+Projeto desenvolvido em linguagem C++ para a disciplina de **Algoritmos e Programação** da Universidade do Vale do Itajaí (UNIVALI). O sistema tem como objetivo automatizar a análise de elegibilidade de candidatos a bolsas universitárias, considerando critérios socioeconômicos e acadêmicos.
 
-🟢 Bolsa Integral — 100%
-🟡 Meia-Bolsa — 50%
-🔴 Indeferido — Sem bolsa
-📋 Informações analisadas
+A aplicação utiliza estruturas condicionais, operadores lógicos e aritméticos para processar as informações fornecidas pelo usuário e determinar se o candidato atende aos requisitos para a concessão de uma bolsa integral ou parcial.
 
-# O programa solicita:
+## Funcionalidades
 
--Nome e curso
--Renda familiar
--Número de pessoas na residência
--Nota do processo seletivo
--Nota do ENEM
--Média do Ensino Médio
--Existência de deficiência
--Escola pública
--Familiares que já possuem bolsa
--Cálculos
--Renda Per Capita
--Renda Familiar ÷ Número de Pessoas
+- Coleta de dados acadêmicos e socioeconômicos do candidato.
+- Cálculo da renda familiar per capita.
+- Cálculo da nota final por meio de média ponderada.
+- Análise dos critérios para concessão de bolsa integral (100%) ou parcial (50%).
+- Verificação de condições relacionadas à renda, ao desempenho acadêmico e aos vínculos sociais.
+- Validação dos dados informados.
+- Exibição do resultado da análise, incluindo os critérios não atendidos em caso de indeferimento.
 
--Nota Final
--Processo Seletivo × 40%
--ENEM × 30%
--Ensino Médio × 30%
+## Regras de Avaliação
 
-# Regras das bolsas:
-
-🟢 100%	Renda per capita ≤ R$ 800 + Nota ≥ 8,0 + Escola Pública
-🟡 50%	Renda per capita ≤ R$ 1.600 + Nota ≥ 6,0
-🔴 Sem bolsa	Não atender aos requisitos
-
-Além disso, o sistema verifica familiares que já possuem bolsa e outras condições adicionais.
-
-# Validação:
-
-O programa também impede dados inválidos, como:
-
-Renda negativa;
-Número de pessoas menor ou igual a zero;
-Notas fora de 0 a 10;
-Valores diferentes de 0 ou 1 para respostas de sim/não;
-Número negativo de familiares bolsistas.
-Tecnologias
-
-1. Clone o projeto
-git clone <URL_DO_REPOSITORIO>
-
-2. Compile
-g++ main.cpp -o sistema-bolsas
-
-3. Execute
-./sistema-bolsas
-
-
-# Objetivo:
-
-O projeto foi desenvolvido com finalidade acadêmica, colocando em prática conceitos fundamentais de programação em C++ e estruturas de decisão.
-
-# Saídas esperadas:
+A nota final é calculada utilizando a seguinte média ponderada:
 
 ```text
-
-Bolsa 100%:
-===========================================================
-Curso: Engenharia de Computação
-Nota final: 8.7
-Renda per capita: 600
-Resultado da bolsa: DEFERIDO - BOLSA INTEGRAL (100%)!
-PARABENS, João Silva, estamos felizes em ter voce conosco!
-===========================================================
-
-Bolsa 50%:
-===========================================================
-Curso: Administração
-Nota final: 6.5
-Renda per capita: 1200
-Resultado da bolsa: DEFERIDO - MEIA-BOLSA (50%)!
-PARABENS, Maria Souza, estamos felizes em ter voce conosco!
-===========================================================
-
-Indeferimento: 
-===========================================================
-Curso: Direito
-Nota final: 4.6
-Renda per capita: 2500
-Resultado: INDEFERIDO (sem bolsa)!
-Motivos do indeferimento:
-- Renda per capita acima do limite permitido.
-- Nota final abaixo do limite permitido.
-- Numero de familiares com bolsa acima do limite permitido.
-- Para aluno sem deficiencia e que estudou em escola particular, a nota minima deve ser 7.5.
-===========================================================
-
+Nota Final = (PS × 0.4) + (ENEM × 0.3) + (EM × 0.3)
 ```
-Autor: Marlon Vritzl
 
-Projeto acadêmico — C++
+Onde:
+
+- **PS:** Nota do processo seletivo interno.
+- **ENEM:** Nota do Exame Nacional do Ensino Médio.
+- **EM:** Média geral do ensino médio.
+
+### Critérios para Bolsa Integral
+
+- Renda familiar per capita menor ou igual a R$ 800,00.
+- Nota final maior ou igual a 8,0.
+- Ensino médio cursado em escola pública.
+- Nenhum familiar bolsista na universidade.
+
+### Critérios para Bolsa Parcial
+
+- Renda familiar per capita menor ou igual a R$ 1.600,00.
+- Nota final maior ou igual a 6,0.
+- No máximo um familiar bolsista na universidade.
+- Aplicação da condição adicional de nota mínima 7,5 para candidatos que não estudaram na rede pública e não possuem deficiência.
+
+## Conceitos Aplicados
+
+- Lógica de programação.
+- Variáveis, constantes e tipos de dados.
+- Operadores aritméticos, relacionais e lógicos.
+- Estruturas condicionais (`if`, `else if` e `else`).
+- Validação de entradas.
+- Construção de tabelas-verdade.
+- Representação de algoritmos por fluxogramas.
+
+## Tecnologias
+
+- **Linguagem:** C++
+- **Execução:** Terminal/console
+- **Documentação acadêmica:** PDF com fluxograma e tabelas-verdade.
+
+## Objetivo Acadêmico
+
+Aplicar os fundamentos da lógica proposicional e das estruturas de decisão na construção de um sistema de análise de critérios, desenvolvendo habilidades de modelagem de problemas e implementação de algoritmos.
+
+## Instituição
+
+Universidade do Vale do Itajaí (UNIVALI)  
+Disciplina: Algoritmos e Programação 1
+
